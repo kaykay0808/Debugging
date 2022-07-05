@@ -6,7 +6,7 @@ import android.util.Log
 import android.widget.TextView
 import timber.log.Timber
 
-private const val TAG = "Jason"
+private const val TAG = "MainActivity"
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         division()
     }
 
-    fun logging() {
+    private fun logging() {
         Timber.tag(TAG).e("ERROR: a serious error like an app crash")
         Timber.tag(TAG).w("WARN: warns about the potential for serious errors")
         Timber.tag(TAG).i("INFO: reporting technical information, such as an operation succeeding")
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         Timber.tag(TAG).v("VERBOSE: more verbose than DEBUG logs")
     }
 
-    fun division() {
+    private fun division() {
         val numerator = 60
         var denominator = 4
         repeat(4) {
